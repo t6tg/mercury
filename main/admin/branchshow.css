@@ -1,0 +1,177 @@
+*{
+  font-family: 'Mitr', sans-serif;
+}
+body {
+  background-color: #8177b1;
+}
+header {
+  background-color: #313866;
+  text-align: center;
+  color: white;
+  width: 30%;
+  padding: 20px 20px;
+  margin: 0 auto;
+  border-radius: 30px;
+}
+#manage a#logout{
+  background-color: red;
+  text-decoration: none;
+  color: white;
+  border-radius: 15px;
+  padding: 8px 8px;
+}
+#manage a#logout:hover{
+  background-color: rgb(252, 252, 252);
+  color: red;
+  transition: all 1s;
+}
+#manage a#fix{
+  background-color: yellow;
+  text-decoration: none;
+  color: black;
+  border-radius: 15px;
+  padding: 8px 8px;
+}
+#manage a#fix:hover{
+  background-color: #964ec2;
+  color: white;
+  transition: all 0.5s;
+}
+.grid2x2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.grid2x2 > div {
+    display: flex; 
+    flex-basis: calc(50% - 40px);  
+    justify-content: center;
+    flex-direction: column;
+}
+.grid2x2 > div > a {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 20px 20px;
+    color: white;
+    text-decoration: none;
+}
+.box { margin: 20px; }
+.box { background-color:#313866;
+    border-radius: 30px; }
+.box:hover{
+  transition: all 0.5s;
+  background-color:#964ec2;
+}
+.box:active{
+  background-color:#ff7bbf;
+}
+table{
+  overflow-x: auto;
+}
+table,td,th{
+  border: 1px solid black;
+  padding: 10px 10px;
+  border-collapse: collapse;
+}
+tr:nth-child(even){background-color: #f2f2f2}
+th{
+  background-color: #313866;
+  color: white;
+}
+.show{
+  border: 5px solid #313866;
+  background-color: white;
+  width: 50%;
+  margin: 0 auto;
+  padding-left: 10px;
+  border-radius: 30px;
+  padding-bottom: 10px;
+  margin-top: 20px;
+}
+.head{
+  color: #964ec2;
+}
+hr{
+  width: 100%;
+  display: inline-block;
+}
+@media only screen and (max-width: 320px) {
+  header#manage{
+    width: 80%;
+    font-size: 12px;
+  }
+  header#branchdetail{
+    width: 80%;
+    font-size: 8px;
+  }
+  article.show{
+    display: inline-block;
+    width: 80%;
+    font-size: 10px;
+  }
+  hr{
+    width: 200px;
+    margin-right: 50px;
+  }
+  
+}
+@media only screen and (max-width: 375px) {
+  header#manage{
+    width: 80%;
+    font-size: 12px;
+  }
+  header#branchdetail{
+    width: 80%;
+    font-size: 8px;
+  }
+  .show{
+    display: inline-block;
+    width: 90%;
+    font-size: 10px;
+  }
+}
+@media only screen and (max-width: 414px) {
+  header#manage{
+    width: 80%;
+    font-size: 12px;
+  }
+  header#branchdetail{
+    width: 80%;
+    font-size: 8px;
+  }
+  .show{
+    display: inline-block;
+    width: 90%;
+    font-size: 10px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  header#manage{
+    width: 80%;
+  }
+  header#branchdetail{
+    width: 90%;
+  }
+  .show{
+    display: inline-block;
+    width: 97%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  header#manage{
+    width: 80%;
+  }
+  header#branchdetail{
+    width: 80%;
+  }
+  .show{
+    display: inline-block;
+    width: 90%;
+  }
+}
+
+
+
+
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Staff</title>
+    <link rel="stylesheet" href="page.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mitr&display=swap" rel="stylesheet">
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .impact:hover {
+            border: 4px solid #964EC2;
+        }
+
+        input[type=text] {
+            color: white;
+            background-color: #212226;
+            width: 40%;
+            height: 2.8em;
+            margin: auto;
+            border: 2px solid #964EC2;
+            border-radius: 10px;
+            font-size: 15px;
+        }
+
+    </style>
+    <script>
+        var xmlHttp;
+        function checkStaff() {
+            Ajax = new XMLHttpRequest();
+            Ajax.onreadystatechange = showResult;
+            var username = document.getElementById("check").value;
+            var url = "Search.php?username=" + username;
+            Ajax.open("GET", url);
+            Ajax.send();
+        }
+        function showResult() {
+            if (Ajax.readyState == 4) {
+                if (Ajax.status == 200)
+                    document.getElementById("result").innerHTML = Ajax.responseText;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <a href="Staff8.php?page=1"><img src="Pic/Back.png" alt="back" width="50px" height="60px"
+                style="display: inline;"></a>
+        <input type="text" id="check" onkeyup="checkStaff()" placeholder="Enter Staff name">
+    </header>
+
+    <div id="result"></div>
+</body>
+
+</html>

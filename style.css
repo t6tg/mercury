@@ -1,0 +1,47 @@
+.section {
+  margin-top: 15%;
+  text-align: center;
+  padding: 20px 20px 30px;
+  margin-left: 20%;
+  margin-right: 20%;
+  background: white;
+  border-radius: 20px;
+}
+
+.center {
+  text-align: center;
+}
+
+body {
+  background-color: #212226;
+  font-family: "Mitr", sans-serif;
+}
+
+h1 {
+  color: #000;
+}
+
+input {
+  width: 50%;
+  padding: 12px 20px;
+  border-radius: 10px;
+  background-color: #cbd5e0;
+  border-style: none;
+  font-family: "Mitr", sans-serif;
+}
+
+button {
+  padding: 12px 20px;
+  border-radius: 10px;
+  border-style: none;
+  color: white;
+  background-color: #964ec2;
+  font-family: "Mitr", sans-serif;
+}
+
+@media only screen and (max-width: 1024px) {
+  .section {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}

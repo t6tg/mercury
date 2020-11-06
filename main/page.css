@@ -1,0 +1,48 @@
+body {
+  background-color: #212226;
+  font-family: "Mitr", sans-serif;
+  color: white;
+}
+.head{
+    font-size: 3em;
+    color:  #FF7BBF;
+}
+header {
+    margin: 1%;
+    display: flex;
+}
+table {
+     text-align: center;
+     margin-left: auto;
+    margin-right: auto;
+        }
+ hr {
+     border: 1px solid #FF7BBF;
+ }
+
+img {
+      margin: 10px;
+    }
+div {
+   margin: auto;
+ }
+.pagination{
+    margin: auto;
+  width: max-content;
+}
+.pagination a {
+  color: white;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+}
+
+/* Style the active/current link */
+.pagination a.active {
+  background-color: #964EC2;
+  color: black;
+}
+
+/* Add a grey background color on mouse-over */
+.pagination a:hover:not(.active) {background-color: #ddd;}
