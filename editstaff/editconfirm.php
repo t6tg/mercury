@@ -1,35 +1,25 @@
 <?php
-session_start();
-include "connect.php";
-if ($_SESSION['username'] == null) {
-    echo "<script>alert('กรุณาเข้าสู่ระบบ');</script>";
-    header("Refresh:0 , url=../index.html");
-    exit();
-}
+include "../connect.php";
 
-if ($stmt->execute())
-    header("location: workshop9_9.php");
-
-if ($_POST['name'] != null && $_POST['value'] != null) {
-    $stmt = $pdo->prepare("UPDATE member SET password=?, name=?, address=? , mobile=? , email=? WHERE username=?");
-    $stmt->bindParam(1, $_POST["password"]);
-    $stmt->bindParam(2, $_POST["name"]);
-    $stmt->bindParam(3, $_POST["address"]);
-    $stmt->bindParam(4, $_POST["mobile"]);
-    $stmt->bindParam(5, $_POST["email"]);
-    $stmt->bindParam(6, $_POST["username"]);
-    if ($conn->query($sql)) {
+if ($_POST["staffname"] != null && $_POST["price"] != null) {
+    $stmt = $pdo->prepare("UPDATE staff SET staffname=?, worktime=? , type=? , branch_no=? , price=? WHERE staffno=?");
+    $stmt->bindParam(1, $_POST["staffname"]);
+    $stmt->bindParam(2, $_POST["worktime"]);
+    $stmt->bindParam(3, $_POST["type"]);
+    $stmt->bindParam(4, $_POST["branch_no"]);
+    $stmt->bindParam(5, $_POST["price"]);
+    $stmt->bindParam(6, $_POST["staffno"]);
+    if ($stmt->execute()) {
         echo "<script>alert('แก้ไขสำเร็จ');</script>";
-        header("Refresh:0 , url=editstaff.php");
+        header("Refresh:0 , url=allstaff.php");
         exit();
     } else {
         echo "<script>alert('แก้ไขไม่สำเร็จ');</script>";
-        header("Refresh:0 , url=editstaff.php");
+        header("Refresh:0 , url=allstaff.php");
         exit();
     }
-    echo $_POST['text_todo'];
 } else {
     echo "<script>alert('กรุณากรอกข้อมูล');</script>";
-    header("Refresh:0 , url=editstaff.php");
+    header("Refresh:0 , url=allstaff.php");
     exit();
 }
