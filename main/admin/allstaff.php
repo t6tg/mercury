@@ -1,3 +1,12 @@
+<?php
+session_start();
+if (
+    $_SESSION['mem_id'] == null ||
+    $_SESSION["mem_role"] != "admin"
+) {
+    header("location: ../../index.html");
+}
+?>
 <!DOCTYPE html>
 <?php include "../connect.php" ?>
 <html lang="en">
