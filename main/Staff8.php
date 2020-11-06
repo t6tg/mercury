@@ -74,9 +74,9 @@ if (
 
 <body>
     <header>
-        <img src="pic/The_Mercury.png" alt="Logo" width="70px" height="70px" class="logo">
+        <img src="./Pic/The_Mercury.png" alt="Logo" width="70px" height="70px" class="logo">
         <b style="margin-left: 1%;" class="head">The Mercury Staff</b>
-        <a href="Search.html"><img src="pic/Search.png" alt="Search" width="70px" height="70px" class="search"></a>
+        <a href="Search.html"><img src="./Pic/Search.png" alt="Search" width="70px" height="70px" class="search"></a>
     </header>
     <?php
     $page = $_GET["page"];
@@ -104,7 +104,7 @@ if (
                     $row = $stml->fetch();
                     if ($no > 0) {
                         echo "<td>";
-                        echo "<a href='data.php?staff_id=" . $row["staffno"] . "&branch_no=" . $row["branch_no"] . "'><img src='pic/" . $row["staffno"] . ".jpg' width='250' height='320' class='impact'></a>" . "<br>";
+                        echo "<a href='data.php?staff_id=" . $row["staffno"] . "&branch_no=" . $row["branch_no"] . "'><img src='./Pic/" . $row["staffno"] . ".jpg' width='250' height='320' class='impact'></a>" . "<br>";
                         echo $row["staffno"] . "\t";
                         echo $row["staffname"] . "<br>";
                         echo $row["price"] . " ฿";

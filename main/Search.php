@@ -31,7 +31,7 @@ $objQuery = mysqli_query($conn, $sql);
             echo "</tr><tr>";
         }
         echo "<td><a href='data.php?staff_id=" . $row["staffno"] . "&branch_no=" . $row["branch_no"] . "'>";
-        echo "<img src='pic/" . $row["staffno"] . ".jpg' width=250 height=300 class='impact'> </a>" . "<br>";
+        echo "<img src='./Pic/" . $row["staffno"] . ".jpg' width=250 height=300 class='impact'> </a>" . "<br>";
         echo $row["staffno"] . "\t";
         echo $row["staffname"] . "<br>";
         echo $row["price"] . " ฿";

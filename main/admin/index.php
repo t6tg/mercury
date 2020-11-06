@@ -18,7 +18,7 @@
     ?>
     <header id="manage">
         <h1>จัดการร้าน</h1>
-        <a name="" id="logout" href="../logout.php">LOGOUT</a>
+        <a name="" id="logout" href="../../logout.php">LOGOUT</a>
         <a name="" id="fix" href="./allstaff.php">แก้ไข</a>
     </header>
     <article>
