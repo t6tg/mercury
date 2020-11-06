@@ -1,4 +1,13 @@
 <?php
+session_start();
+if (
+    $_SESSION['mem_id'] == null ||
+    $_SESSION["mem_role"] != "admin"
+) {
+    header("location: ../../index.html");
+}
+?>
+<?php
 include "../connect.php";
 
 if ($_POST["staffname"] != null && $_POST["price"] != null) {

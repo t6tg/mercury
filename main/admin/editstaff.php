@@ -1,3 +1,12 @@
+<?php
+session_start();
+if (
+    $_SESSION['mem_id'] == null ||
+    $_SESSION["mem_role"] != "admin"
+) {
+    header("location: ../../index.html");
+}
+?>
 <?php include "../connect.php" ?>
 <?php
 $stmt = $pdo->prepare("SELECT * FROM staff WHERE staffno = ?");

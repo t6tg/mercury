@@ -1,3 +1,12 @@
+<?php
+session_start();
+if (
+    $_SESSION['mem_id'] == null ||
+    $_SESSION["mem_role"] != "admin"
+) {
+    header("location: ../../index.html");
+}
+?>
 <?php include "connect.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,6 +29,7 @@
         <h1>จัดการร้าน</h1>
         <a name="" id="logout" href="../../logout.php">LOGOUT</a>
         <a name="" id="fix" href="./allstaff.php">แก้ไข</a>
+        <a name="" id="fix" href="./Access.php">ประวัติการจอง</a>
     </header>
     <article>
         <div class="grid2x2">
