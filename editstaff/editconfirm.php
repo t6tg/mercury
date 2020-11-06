@@ -1,14 +1,23 @@
 <?php
 session_start();
-require_once "database.php";
+include "connect.php";
 if ($_SESSION['username'] == null) {
     echo "<script>alert('กรุณาเข้าสู่ระบบ');</script>";
     header("Refresh:0 , url=../index.html");
     exit();
 }
 
+if ($stmt->execute())
+    header("location: workshop9_9.php");
+
 if ($_POST['name'] != null && $_POST['value'] != null) {
-    $sql = "UPDATE product SET name = '" . trim($_POST['name']) . "' ,value = '" . trim($_POST['value']) . "' WHERE id = '" . $_POST['id'] . "'";
+    $stmt = $pdo->prepare("UPDATE member SET password=?, name=?, address=? , mobile=? , email=? WHERE username=?");
+    $stmt->bindParam(1, $_POST["password"]);
+    $stmt->bindParam(2, $_POST["name"]);
+    $stmt->bindParam(3, $_POST["address"]);
+    $stmt->bindParam(4, $_POST["mobile"]);
+    $stmt->bindParam(5, $_POST["email"]);
+    $stmt->bindParam(6, $_POST["username"]);
     if ($conn->query($sql)) {
         echo "<script>alert('แก้ไขสำเร็จ');</script>";
         header("Refresh:0 , url=editstaff.php");
