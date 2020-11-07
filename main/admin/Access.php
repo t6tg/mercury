@@ -113,7 +113,7 @@ if (
     <header>
         <img src="../Pic/The_Mercury.png" alt="Logo" width="70px" height="70px" class="logo">
         <b style="margin-left: 1% ;margin-top: 1%;" class="head">The Mercury Reservation</b>
-        <a name="" id="logout" href="../logout.php">LOGOUT</a>
+        <a name="" id="logout" href="../../logout.php">LOGOUT</a>
         <?php
         $stml = $pdo->prepare("SELECT * FROM access");
         $stml->execute();
