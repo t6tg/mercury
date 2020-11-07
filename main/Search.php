@@ -9,7 +9,7 @@ if (
 ?>
 <?php
 $keyword = $_GET["username"];
-$conn = mysqli_connect("localhost", "root", "jamesWebDev*");
+$conn = mysqli_connect("localhost", "root", "jamesWebDev");
 if ($conn) {
     mysqli_select_db($conn, "mercury");
     mysqli_query($conn, "SET NAMES utf8");
