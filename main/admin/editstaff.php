@@ -29,13 +29,13 @@ $row = $stmt->fetch();
 </head>
 
 <body>
+    <a href="allstaff.php" class="buttonback"><button>BACK</button></a>
     <div class="section">
         <form action="editconfirm.php" method="post">
             <img src="./img/<?= $row["staffno"] ?>.jpg" alt="Responsive image" width='150' class="rounded"><br><br>
-
             หมายเลขพนักงาน : <input type="text" name="staff" value="<?= $row["staffno"] ?>" disabled><br><br>
             <input type="hidden" value="<?= $row["staffno"] ?>" name="staffno" />
-            ชื่อพนักงาน : <input type="text" name="staffname" value="<?= $row["staffname"] ?>" pattern="[A-Za-z0-9ก-์]{2,50}"><br><br>
+            ชื่อพนักงาน : <input type="text" name="staffname" value="<?= $row["staffname"] ?>" pattern="[A-Za-z0-9ก-์\s]{2,50}"><br><br>
             เวลาเข้างาน : <input type="time" name="worktime" value="<?= $row["worktime"] ?>"><br><br>
             ประเภท : <input type="text" name="type" value="<?= $row["type"] ?>" pattern="[A-Za-z0-9ก-์]{2,50}"><br><br>
             สาขาที่ทำงาน : <input type="text" name="branch_no" value="<?= $row["branch_no"] ?>" pattern="[A-Za-z0-9]{5,15}"><br><br>
