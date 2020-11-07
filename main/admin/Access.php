@@ -4,7 +4,7 @@ if (
     $_SESSION['mem_id'] == null ||
     $_SESSION["mem_role"] != "admin"
 ) {
-    header("location: ../../index.html");
+    header("location: ../../index.php");
 }
 ?>
 <!DOCTYPE html>
