@@ -31,6 +31,14 @@ input {
   font-family: "Mitr", sans-serif;
 }
 
+input:invalid {
+  border: solid 2px red;
+}
+
+input:valid {
+  border: solid 5px green;
+}
+
 button {
   padding: 12px 20px;
   border-radius: 10px;
