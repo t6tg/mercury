@@ -5,7 +5,7 @@ if (trim($_POST['mem_id']) == null || trim($_POST['password']) == null) {
 } else {
     include "./main/connect.php";
     session_start();
-    $stmt = $pdo->prepare("SELECT mem_id,password,mem_role FROM member WHERE mem_id = ? AND password = ? ");
+    $stmt = $pdo->prepare("SELECT mem_id,password,mem_role FROM member WHERE mem_id = ? AND password = ?");
     $stmt->bindParam(1, $_POST["mem_id"]);
     $password = md5($_POST["password"]);
     $stmt->bindParam(2, $password);

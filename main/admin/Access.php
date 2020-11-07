@@ -8,7 +8,7 @@ if (
 }
 ?>
 <!DOCTYPE html>
-<?php include "connection.php" ?>
+<?php include "connectphp" ?>
 <html lang="en">
 
 <head>
@@ -87,7 +87,7 @@ if (
 
 <body>
     <header>
-        <img src="pic/The_Mercury.png" alt="Logo" width="70px" height="70px" class="logo">
+        <img src="../Pic/The_Mercury.png" alt="Logo" width="70px" height="70px" class="logo">
         <b style="margin-left: 1% ;margin-top: 1%;" class="head">The Mercury Reservation</b>
         <?php
         $stml = $pdo->prepare("SELECT * FROM access");
