@@ -16,12 +16,12 @@ if (trim($_POST['mem_id']) == null || trim($_POST['password']) == null) {
         $_SESSION["mem_id"] = $row["mem_id"];
         $_SESSION["mem_role"] = $row["mem_role"];
         if ($_SESSION["mem_role"] == "admin") { //ถ้าเป็น admin ให้กระโดดไปหน้า admin_page.php
-            Header("Refresh:0 , url=main/admin/index.php");
+            Header("Refresh:0 , url=./main/admin/index.php");
             session_write_close();
         }
 
         if ($_SESSION["mem_role"] == "customer") {  //ถ้าเป็น member ให้กระโดดไปหน้า user_page.php
-            Header("Refresh:0 , url=main/Staff8.php");
+            Header("Refresh:0 , url=./main/Staff8.php");
             session_write_close();
         }
     } else {
