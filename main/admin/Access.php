@@ -2,13 +2,13 @@
 session_start();
 if (
     $_SESSION['mem_id'] == null ||
-    $_SESSION["mem_role"] != "admin"
+    $_SESSION["mem_role"] != "customer"
 ) {
-    header("location: ../../index.html");
+    header("location: ../index.html");
 }
 ?>
 <!DOCTYPE html>
-<?php include "connectphp" ?>
+<?php include "connect.php" ?>
 <html lang="en">
 
 <head>
@@ -18,6 +18,30 @@ if (
     <link rel="stylesheet" href="page.css">
     <link href="https://fonts.googleapis.com/css2?family=Mitr&display=swap" rel="stylesheet">
     <style>
+        tr:nth-child(odd) {
+            background-color: #313866;
+        }
+
+        tr:nth-child(even) {
+            background-color: #8177b1;
+        }
+
+        a#logout {
+            background-color: red;
+            border-radius: 15px;
+            text-decoration: none;
+            line-height: 6em;
+            color: white;
+            display: inline-flex;
+            margin-left: 42em;
+        }
+
+        a#logout:hover {
+            background-color: rgb(252, 252, 252);
+            color: red;
+            transition: all 1s;
+        }
+
         table,
         tr,
         td {
@@ -87,8 +111,9 @@ if (
 
 <body>
     <header>
-        <img src="../Pic/The_Mercury.png" alt="Logo" width="70px" height="70px" class="logo">
+        <img src="Pic/The_Mercury.png" alt="Logo" width="70px" height="70px" class="logo">
         <b style="margin-left: 1% ;margin-top: 1%;" class="head">The Mercury Reservation</b>
+        <a name="" id="logout" href="../logout.php">LOGOUT</a>
         <?php
         $stml = $pdo->prepare("SELECT * FROM access");
         $stml->execute();

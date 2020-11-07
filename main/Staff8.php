@@ -18,8 +18,23 @@ if (
     <link href="https://fonts.googleapis.com/css2?family=Mitr&display=swap" rel="stylesheet">
     <title>The Mercury Staff</title>
     <style>
+        a#logout {
+            background-color: red;
+            text-decoration: none;
+            line-height: 6em;
+            color: white;
+            display: inline-flex;
+            border-radius: 15px;
+        }
+
+        a#logout:hover {
+            background-color: rgb(252, 252, 252);
+            color: red;
+            transition: all 1s;
+        }
+
         .search {
-            margin-left: 52em;
+            margin-left: 48em;
         }
 
         .impact:hover {
@@ -74,9 +89,10 @@ if (
 
 <body>
     <header>
-        <img src="./Pic/The_Mercury.png" alt="Logo" width="70px" height="70px" class="logo">
+        <img src="Pic/The_Mercury.png" alt="Logo" width="70px" height="70px" class="logo">
         <b style="margin-left: 1%;" class="head">The Mercury Staff</b>
-        <a href="Search.html"><img src="./Pic/Search.png" alt="Search" width="70px" height="70px" class="search"></a>
+        <a href="Search.html"><img src="Pic/Search.png" alt="Search" width="70px" height="70px" class="search"></a>
+        <a name="" id="logout" href="../logout.php">LOGOUT</a>
     </header>
     <?php
     $page = $_GET["page"];
@@ -104,7 +120,7 @@ if (
                     $row = $stml->fetch();
                     if ($no > 0) {
                         echo "<td>";
-                        echo "<a href='data.php?staff_id=" . $row["staffno"] . "&branch_no=" . $row["branch_no"] . "'><img src='./Pic/" . $row["staffno"] . ".jpg' width='250' height='320' class='impact'></a>" . "<br>";
+                        echo "<a href='data.php?staff_id=" . $row["staffno"] . "&branch_no=" . $row["branch_no"] . "'><img src='Pic/" . $row["staffno"] . ".jpg' width='250' height='320' class='impact'></a>" . "<br>";
                         echo $row["staffno"] . "\t";
                         echo $row["staffname"] . "<br>";
                         echo $row["price"] . " ฿";

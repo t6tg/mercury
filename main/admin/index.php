@@ -2,9 +2,9 @@
 session_start();
 if (
     $_SESSION['mem_id'] == null ||
-    $_SESSION["mem_role"] != "admin"
+    $_SESSION["mem_role"] != "customer"
 ) {
-    header("location: ../../index.html");
+    header("location: ../index.html");
 }
 ?>
 <?php include "connect.php"; ?>
@@ -29,7 +29,7 @@ if (
         <h1>จัดการร้าน</h1>
         <a name="" id="logout" href="../../logout.php">LOGOUT</a>
         <a name="" id="fix" href="./allstaff.php">แก้ไข</a>
-        <a name="" id="fix" href="./Access.php">ประวัติการจอง</a>
+        <a name="" id="use" href="./Access.php">การเข้าใช้</a>
     </header>
     <article>
         <div class="grid2x2">
